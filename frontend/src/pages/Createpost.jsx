@@ -46,7 +46,7 @@ function CreatePost() {
 
     return (
         <div>
-            <h2>Create a Note</h2>
+            <h2>Create a file</h2>
             <form onSubmit={createNote} encType="multipart/form-data">
                 <label htmlFor="title">Title:</label>
                 <br />

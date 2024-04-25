@@ -24,3 +24,9 @@ class NoteSerializer(serializers.ModelSerializer):
         model=Notes
         fields=['id','title','file','create','user']
         extra_kwargs = {"user": {"read_only": True}}  # Set user__username field as read-only
+
+
+class DataSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Notes
+        fields=['id','title','file','create','user']

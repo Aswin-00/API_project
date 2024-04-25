@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import api from "../api";
 import Note from "../components/Note";
 import "../styles/Home.css";
+import "../styles/Folder.css";
 import CreatePost from './Createpost';
 import Navbar  from "./Navbar";
 
@@ -41,10 +42,14 @@ function Home() {
             <Navbar />
             <CreatePost />
             <div>
-                <h2>Notes</h2>
+                <h2>Show Files</h2>
+                <div className="container"> 
+
                 {notes.map((note) => (
                     <Note note={note} onDelete={deleteNote} key={note.id} />
+
                 ))}
+                </div>
             </div>
         </div>
     );

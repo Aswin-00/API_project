@@ -1,0 +1,39 @@
+.container {
+        max-width: 800px;
+        padding: 20px;
+        text-align: left; /* Align contents to the left */
+    }
+    .icon-box {
+        position: relative; /* Make it relative for absolute positioning */
+        width: 100px;
+        height: 160px; /* Adjusted height to accommodate title and date */
+        display: inline-block;
+        margin-right: 20px;
+        text-align: center;
+        transition: transform 0.3s ease; /* Add transition */
+    }
+    .icon-box:hover {
+        transform: scale(1.1); /* Scale up on hover */
+        background-color: rgba(212, 110, 110, 0.2); /* White color with 20% opacity */
+    }
+    .icon {
+        max-width: 80px;
+        max-height: 80px;
+        margin-top: 10px;
+    }
+    .title {
+        bottom: 30px; /* Adjust as needed */
+        left: 0; /* Align to the left */
+        right: 0;
+    }
+    .date {
+        margin: 0px;
+        font-size: 0.8em; /* Make the font size smaller */
+        opacity: 0.5; /* Initially 50% opacity */
+    }
+
+    .decription{
+        display: flex;
+        flex-direction:column;
+        gap: 2px;
+    }

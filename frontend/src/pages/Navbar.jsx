@@ -7,11 +7,11 @@ function Navbar() {
         <nav className="navbar">
             <div className="navbar-container">
                 <Link to="/" className="navbar-logo">
-                    Your Logo
+                    Share My Project
                 </Link>
                 <ul className="nav-menu">
                     <li className="navnavbar-item">
-                        <Link to="/" className="nav-links">
+                        <Link to="/home" className="nav-links">
                             Home
                         </Link>
                     </li>

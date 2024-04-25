@@ -1,45 +1,44 @@
 import React from "react";
-// import "../styles/Note.css"
+import "../styles/Folder.css"
 
 function Note({ note, onDelete }) {
-    const formattedDate = new Date(note.created_at).toLocaleDateString("en-US")
 
-    // return (
-    //     <div className="note-container">
-    //         <p className="note-title">{note.title}</p>
-    //         <a href={note.file}>download</a>
-    //         <p className="note-date">{formattedDate}</p>
-    //         <p className="note-date">lsjdldjf {note.id}</p>
+    return (
+            <div className="icon-box">
+              <a href={note.file}>
+                <img
+                  className="icon"
+                  src="/Dtafalonso-Yosemite-Flat-Folder.512.png"
+                  alt="Folder Icon"
+                />
+              </a>
+              <div className="decription">
+                  <p className="title">{note.title}</p> {/* Use className instead of class */}
+                  <p className="date">{note.create}</p> {/* Use className instead of class */}
+                  <p className="acton">
+                    <button onClick={() => { window.location.href = note.file; }}>
+                      Download
+                    </button>
+                  </p>
+                  <p className="acton">
+                    <button onClick={() => { window.location.href = note.file; }}>
+                      update
+                    </button>
+                  </p>
+                  <p className="acton">
+                    <button onClick={() => { onDelete(note.file); }}>
+                      remove
+                    </button>
+                  </p>
 
-    //         <button className="delete-button" onClick={() => onDelete(note.id)}>
-    //             Delete
-    //         </button>
-    //     </div>
-    // );
+              </div>
+            </div>
+          
 
-    return(
-        <table className="note-table">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Download</th>
-            <th>Date</th>
-            <th>ID</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>{note.title}</td>
-            <td><a href={note.file}>Download</a></td>
-            <td>{formattedDate}</td>
-            <td>{note.id}</td>
-            <td><button onClick={() => onDelete(note.id)}>Delete</button></td>
-        </tr>
-    </tbody>
-</table>
+        
 
     );
+
 }
 
 export default Note

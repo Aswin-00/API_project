@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-
+import Indexepage from "./pages/Indexpage"
 import  Login from  './pages/Login'
 import  Home from  './pages/Home'
 import  Register from  './pages/Register'
@@ -28,7 +28,7 @@ function App() {
     <BrowserRouter>
         <Routes>
           <Route 
-            path='/'
+            path='/home'
             element ={
               <ProtectedRouts>
                   <Home />
@@ -38,6 +38,7 @@ function App() {
           />
 
 
+          <Route path= "/"element={<Indexepage />}/>
           <Route path= "/login"element={<Login />}/>
           <Route path= "/logout"element={<Logout />}/>
           
